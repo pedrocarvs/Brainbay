@@ -1,0 +1,30 @@
+@model IEnumerable<Brainbay.Core.Models.Character>
+@{
+    ViewData["Title"] = "Characters";
+}
+<h1>Characters</h1>
+<p>
+    <a href="/Characters/Create">Add character</a>
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Species</th>
+            <th>Origin</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach(var c in Model) {
+    <tr>
+        <td>@c.Name</td>
+        <td>@c.Status</td>
+        <td>@c.Species</td>
+        <td>@c.Origin</td>
+        <td>@c.Location</td>
+    </tr>
+}
+    </tbody>
+</table>
